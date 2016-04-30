@@ -1,0 +1,90 @@
+body{
+    color:#898989; font-family: 'Source Sans Pro', sans-serif;
+    font-size:14px; margin: 0; padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {text-decoration: underline;}
+
+.logo {
+    margin: 50px 0 30px;
+}
+.container {
+    background: #fff; display: block; max-width: 1170px;
+    margin: 0 auto; padding: 0 15px;  height: 254px; width: auto;
+    position: absolute; top: 50%; margin-top: -127px; left: 0; right: 0;
+}
+
+.content {
+    display: block; overflow: hidden; 
+}
+
+.content-left, .content-right {
+    float: left; display: inline-block;
+}
+
+.content-left {
+    font-family: 'Dosis', sans-serif; font-size: 200px; font-weight: 700; width: 30%; color: #00aeef;
+}
+
+.content-right { width: 70%; }
+.content-right .error { 
+    font-size: 72px; font-weight: 400; font-family: 'Dosis', sans-serif; text-transform: uppercase; display: block;
+    margin: 40px -5px 0; 
+}
+.content-right .text-404 {
+    font-size: 24px; display: block; margin-bottom: 15px;
+}
+
+.content-right .btn {
+    font-size: 24px; text-transform: uppercase; color: #00aeef;
+}
+
+.block-copyright {
+    position: fixed; bottom: 40px; display: block;
+    width: 100%; color: #fff;
+}
+
+.block-copyright .copyright, .block-copyright .designby {display: inline-block;}
+
+html[dir="rtl"] .content-left, html[dir="rtl"] .content-right {
+    float: right; display: inline-block;
+}
+
+@media (max-width:1024px) {
+    .content-left {width: 35%;}
+    .content-right {width: 65%;}
+}
+
+@media (max-width:991px) {
+    .content-left {width: 45%;}
+    .content-right {width: 55%;}
+}
+
+@media (max-width:767px) {
+    .content-left {width: 55%;}
+    .content-right {width: 45%;}
+}
+
+@media (max-width:568px) {
+    .content-left {width: 60%;}
+    .content-right {width: 40%;}
+}
+
+@media (max-width:480px) {
+    .container {height: 310px; margin-top: -175px; text-align: center;}
+    .content-left, .content-right {
+        float: none; display: block; width: 100%;
+    }
+    .content-left {font-size: 135px;}
+    .content-right .error {margin: -30px -5px 0;}
+}
+
+@media (max-width:360px) {
+    .container {height: 390px; margin-top: -195px; text-align: center;}
+    .content-right .error {margin: 0 -5px;}
+    .content-left {font-size: 150px;}
+}

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7" client="site" method="upgrade">
+	<name>Sj Content Responsive Listing</name>
+	<creationDate>May 2013</creationDate>
+	<author>YouTech Company</author>
+	<copyright>Copyright (c) 2012 YouTech Company</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@ytcvn.com</authorEmail>
+	<authorUrl>http://www.smartaddons.com</authorUrl>
+	<version>1.1.1</version>
+	<description>TPL_YTFRAMEWORK_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_sj_content_reslisting">mod_sj_content_reslisting.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>core</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages/>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_sj_content_reslisting/core/fields">
+			<fieldset name="basic">
+				<field name="header1" type="spacer" class="text"
+					label="For devices have screen width from 1200px to greater."
+				/>
+				<field name="nb-column1" type="list" default="6"  label="# Column" description="For devices have screen width from 1200px to greater.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+				<field name="header2" type="spacer" class="text"
+					label="For devices have screen width from 768px up to 1199px."
+				/>
+				<field name="nb-column2" type="list" default="4" label="# Column" description="For devices have screen width from 768px up to 1199px.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+				<field name="header3" type="spacer" class="text"
+					label="For devices have screen width from 480px up to 767px."
+				/>
+				<field name="nb-column3" type="list" default="2" label="# Column" description="For devices have screen width from 480px up to 767px.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+				<field name="header4" type="spacer" class="text"
+					label="For devices have screen width less than or equal 479px"
+				/>
+				<field name="nb-column4" type="list" default="1" label="# Column" description="For devices have screen width less than or equal 479px.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+				
+				<field name="sort_byform_display" class="btn-group" type="radio" default="1" label="Display Sort Form " description="Display sort form">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="layout_select_display" class="btn-group" type="radio" default="1" label="Display Layout Switch" description="Display Layout Switch">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="default_view" type="radio" class="btn-group" default="grid" label="Default Layout" description="Default Layout">
+					<option value="grid">Grid</option>
+					<option value="list">List</option>
+				</field>
+			</fieldset> 
+
+			<fieldset name="SOURCE_OPTIONS_LABEL" label="SOURCE_OPTIONS_LABEL">
+                <field name="catid" type="category" extension="com_content" multiple="true" size="10" default="" label="DATA_SOURCE_LABEL" description="DATA_SOURCE_DESC" />
+				<field name="catid_preload" type="category" extension="com_content" multiple="false" size="10" default="" label="Category Preload" description="DATA_SOURCE_DESC" />
+                <field name="show_front" type="radio" default="show" class="btn-group" label="FEATURED_ARTICLES_LABEL" description="FEATURED_ARTICLES_DESC">
+                    <option value="show">Show</option>
+                    <option value="hide">Hide</option>
+                    <option value="only">Only</option>
+                </field>
+                <field name="source_limit" type="text" default="6" label="COUNT_LABEl" description="COUNT_DESC" />
+            </fieldset>	
+
+			<fieldset name="ordering"
+				label="MOD_ARTICLES_CATEGORY_FIELD_GROUP_ORDERING_LABEL"
+			>
+				<field name="itemsOrdering_display" type="list" multiple="multiple" size="12" default="" label="Show Item Ordering" description="Item ordering show font-end">
+                    <option value="id">ID</option>
+					<option value="title">Title</option>
+					<option value="hits">Most Views</option>
+					<option value="created">Recently Added</option>
+					<option value="modified">Recently Modified</option>
+					<option value="ordering">Ordering</option>
+					<option value="publish_up">MOD_ARTICLES_CATEGORY_OPTION_STARTPUBLISHING_VALUE
+					</option>
+					<option value="publish_down">MOD_ARTICLES_CATEGORY_OPTION_FINISHPUBLISHING_VALUE
+					</option>
+					<option value="random">Random</option>
+                </field>
+				 <field name="source_order_by" type="list" default="a.title" label="ARTICLE_FIELD_ORDER_BY_LABEL" description="ARTICLE_FIELD_ORDER_BY_DESC">
+                    <option value="id">ID</option>
+					<option value="title">Title</option>
+					<option value="hits">Most Views</option>
+					<option value="created">Recently Added</option>
+					<option value="modified">Recently Modified</option>
+					<option value="ordering">Ordering</option>
+					<option value="publish_up">MOD_ARTICLES_CATEGORY_OPTION_STARTPUBLISHING_VALUE
+					</option>
+					<option value="publish_down">MOD_ARTICLES_CATEGORY_OPTION_FINISHPUBLISHING_VALUE
+					</option>
+					<option value="random">Random</option>
+                </field>
+                <field name="article_ordering_direction" type="list" default="ASC" label="ORDERING_DIRECTION_LABEl" description="ORDERING_DIRECTION_DESC">
+                    <option value="DESC">Descending</option>
+                    <option value="ASC">Ascending</option>
+                </field>
+			</fieldset>
+			<fieldset name="tabs_options" label="Tabs Options">
+				<field name="tab_all_display" class="btn-group" type="radio" default="1" label="Tab All Display" description="Display tab all">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="tal_max_characters" type="text" default="25" label="Category Title Maxlength" description="Max length of category title by characters. Enter value 0 if you want to show all. Please enter integer number >= 0." />
+				<field name="count_items_display"  class="btn-group" type="radio" default="0" label="Count Items Display" description="Display count items on a tab">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="category_ordering" class="btn-group" type="radio"
+					default="title"
+					label="Category Oder By"
+					description="MOD_ARTICLES_CATEGORY_FIELD_ARTICLEORDERING_DESC"
+				>
+					<option value="title">Title
+					</option>
+					<option value="lft">Ordering
+					</option>
+					<option value="random">Random</option>
+				</field>
+			</fieldset>
+			<fieldset name="items_options" label="Items Options">	
+				<field name="item_title_display" class="btn-group" type="radio" default="1" label="Title Display" description="Display title of item">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_title_max_characters" type="text" default="25" label="Title Maxlength" description="Max length of title by characters. Enter value 0 if you want to show all. Please enter integer number >= 0." />
+				<field name="item_description_display"  class="btn-group" type="radio" default="1" label="Description display" description="Display description of item">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_des_maxlength_layout_grid" type="text" default="150" label="Description Maxlength for Layout Grid" description="Max length of description by characters. Enter value 0 if you want to show all. Please enter integer number >= 0." />
+				<field name="item_des_maxlength_layout_list" type="text" default="200" label="Description Maxlength for Layout List" description="Max length of description by characters. Enter value 0 if you want to show all. Please enter integer number >= 0." />
+				<field name="item_tags_display" type="radio" class="btn-group"  default="0" label="Tags Display" description="MOD_ARTICLES_CATEGORY_FIELD_SHOWTAGS_DESC">
+					<option value="1">Show</option>
+					<option value="0">Hide</option>
+				</field>
+				<field name="item_hits_display" type="radio" class="btn-group"   default="1" label="Hits Display" description="MOD_ARTICLES_CATEGORY_FIELD_SHOWHITS_DESC">
+					<option value="1">Show</option>
+					<option value="0">Hide</option>
+				</field>
+				<field name="item_created_display" type="radio" class="btn-group"   default="1" label="Created Date Display" description="MOD_ARTICLES_CATEGORY_FIELD_SHOWDATE_DESC">
+					<option value="1">Show</option>
+					<option value="0">Hide</option>
+				</field>
+				<field name="item_cat_display" type="radio" class="btn-group"   default="1" label="Category Title" description="MOD_ARTICLES_CATEGORY_FIELD_SHOWCATEGORY_DESC">
+					<option value="1">Show</option>
+					<option value="0">Hide</option>
+				</field>	
+				<field name="item_readmore_display" class="btn-group"   type="radio" default="1" label="Readmore Link" description="Display a link of item">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="link_target" type="radio" class="btn-group" default="_self" label="Link Target" description="The Type shows when you click on the link">
+					<option value="_blank">New Window</option>
+					<option value="_self">Same Window</option>
+					<option value="_windowopen">Popup Window</option>
+				</field>
+			</fieldset>
+			<fieldset name="IMAGE_OPTIONS_LABEL" label="IMAGE_OPTIONS_LABEL">
+				<field type="sjheading" label="Get Images From Image Intro" />
+			    <field name="imgcfg_from_image_intro" label="IMAGE_INTRO_LABEL" class="btn-group" description="IMAGE_INTRO_DESC" type="radio" default="1">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+			    </field>
+				<field type="sjheading" label="Get Images From Image Fulltext" />			   
+			   <field name="imgcfg_from_image_fulltext" label="IMAGE_FULLTEXT_LABEL" class="btn-group" description="IMAGE_FULLTEXT_DESC" type="radio" default="1">
+				     <option value="1">Yes</option>
+				     <option value="0">No</option>
+			    </field> 
+				<field type="sjheading" label="Get Images From Inline Introtext" />	
+			    <field name="imgcfg_from_inline_introtext" label="INLINE_INTROTEXT_LABEL" class="btn-group" description="INLINE_INTROTEXT_DESC" type="radio" default="1">
+				     <option value="1">Yes</option>
+				     <option value="0">No</option>
+			    </field>
+				<field type="sjheading" label="Get images From Inline Fulltext" />	
+			    <field name="imgcfg_from_inline_fulltext" label="INLINE_FULLTEXT_LABEL" class="btn-group" description="INLINE_FULLTEXT_DESC" type="radio" default="1">
+				     <option value="1">Yes</option>
+				     <option value="0">No</option>
+			    </field>
+				<field type="sjheading" label="Get images From Extend Folder" />	
+			    <field name="imgcfg_from_external" label="EXTEND_FOLDER_LABEL" class="btn-group" description="EXTEND_FOLDER_DESC" type="radio" default="1">
+				     <option value="1">Yes</option>
+				     <option value="0">No</option>
+			    </field>
+			   <field name="imgcfg_order" type="text" default="image_intro, image_fulltext, inline_introtext, inline_fulltext, external" label="ORDER_GET_LABEL" description="ORDER_GET_DESC" />
+			    <field name="imgcfg_external_url" type="text" default="images/{id}.jpg" label="EXTEND_FOLDER_LABEL" description="EXTEND_FOLDER_DESC"/>
+				<field name="imgcfg_function" default="resize_stretch" type="list" label="RESIZE_MODE_LABEL" description="RESIZE_MODE_DESC">
+				     <option value="none">None</option>
+				     <option value="resize_center">Center</option>
+				     <option value="resize_fill">Fill</option>
+				     <option value="resize_fit">Fit</option>
+				     <option value="resize_stretch">Stretch</option>
+			    </field>
+			    <field name="imgcfg_type" type="list" default="" label="IMAGE_TYPE_LABEL" description="IMAGE_TYPE_DESC">
+				     <option value="">Default</option>
+				     <option value="1">GIF</option>
+				     <option value="2">JPEG</option>
+				     <option value="3">PNG</option>
+			    </field>
+			    <field name="imgcfg_transparency" label="KEEP_TRANSPARENCY_LABEL" class="btn-group" description="KEEP_TRANSPARENCY_DESC" type="radio" default="1">
+				     <option value="1">Yes</option>
+				     <option value="0">No</option>
+			    </field>
+			    <field name="imgcfg_width" type="text" default="400" label="IMAGE_WIDTH_LABEL" description="IMAGE_WIDTH_DESC" />
+			    <field name="imgcfg_height" type="text" default="300" label="IMAGE_HEIGHT_LABEL" description="IMAGE_HEIGHT_DESC" />
+			    <field name="imgcfg_background" type="color" default="#FFFFFF" label="BACKGROUND_LABEL" description="BACKGROUND_DESC" />
+				 <field name="imgcfg_placeholder" label="DEFAULT_IMAGE_LABEL" class="btn-group" description="DEFAULT_IMAGE_DESC" type="radio" default="1">
+	                 <option value="1">Yes</option>
+	                 <option value="0">No</option>
+                </field>
+                <field name="imgcfg_placeholder_path" type="text" default="modules/mod_sj_content_reslisting/assets/images/nophoto.jpg" label="PLACE_HOLDER_PATH_LABEL" description="PLACE_HOLDER_PATH_DESC"/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="include_jquery" type="radio" class="btn-group" default="0"
+					label="INCLUDE_JQUERY_LABEl" description="INCLUDE_JQUERY_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="pretext" type="textarea" default="" label="PRE_TEXT_LABEL"
+					description="PRE_TEXT_DESC" cols="40" rows="4" filter="raw" />
+				<field name="posttext" type="textarea" default="" label="POST_TEXT_LABEL"
+					description="POST_TEXT_DESC" cols="40" rows="4" filter="raw" />
+				<field name="owncache" type="list" default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

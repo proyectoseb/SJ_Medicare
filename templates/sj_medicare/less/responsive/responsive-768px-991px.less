@@ -1,0 +1,217 @@
+// PORTRAIT TABLET TO DEFAULT DESKTOP
+// ----------------------------------
+
+ @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+
+       //Layout-Templates
+      div.container{width: 750px;}
+      .ourmember #yt-extra-carousel img{height: 150px;}
+      .registration .form-horizontal .control-label{white-space: nowrap; width: 28%;}
+     #login{padding: 0; position: absolute;right: 0;z-index: 100; width:250px;}
+
+      .mod-languages ul.dropdown-menu{min-width: 125px;}
+
+      //Generic Article Style
+      .blog-featured .items-row .item .item-image{display: inline-block;}
+      .blog {
+           .items-leading .item{
+                &.span4,
+                &.span6,
+                &.span3 {
+                     .item-image{display: block !important;min-width: inherit !important;min-height: inherit !important;
+                          .img_caption{width: auto !important;}
+                     }
+                }
+               &.col-sm-6 {
+                   .article-text {min-height: 205px;}
+               }
+           }
+           .items-row .item{
+                &.col-sm-3,
+                &.col-sm-4,
+                &.col-sm-6 {
+                     .item-image{display: block!important;min-width: inherit !important;min-height: inherit !important;float: none !important;
+                          .img_caption{width: auto !important;}
+                     }
+                }
+               &.col-sm-6 {
+                   .article-text {min-height: 205px;}
+               }
+           }
+      }
+      .item-page {
+           .btn.btn-flat {padding: 5px 15px;font-size: 12px;}
+           .related-items .img-fulltext {display: inline-block;}
+           .g-pageteam .b-ourteam .col-sm-6.first {clear: both;}
+           .dt-list {width: 47%;}
+      }
+
+      .bs-docs-example .clearfix{display: none;}
+
+      //Tag Category
+      .tag-category ul.items-row .item .item-image {float: none !important;margin: 0px 0px 20px 0px;display: inline-block;}
+
+      //Modules
+           //Basic News
+           div.bsn-wrap {
+                &.theme2 .item {margin-bottom: 30px;
+                     .bsn-image .alignleft {width: 100% !important;}
+                }
+                &.theme3 .item {
+                     .bsn-image .alignleft {width: 100% !important;}
+                }
+           }
+
+
+           //Login
+           .yt-loginform .dropdown-menu {min-width: 188px;}
+           .mod-languages {
+
+                .dropdown-menu {
+                     li a {padding: 7px;}
+                }
+           }
+           .form-vertical  {padding: 9px 5px;
+                .login-greeting {font-size: 12px;}
+                .logout-button .btn {padding: 2px 0 2px 6px;}
+           }
+
+
+
+           //Search
+           #search {
+                #mod-finder-searchform {margin-right: 0px;
+                     #mod-finder-searchword {width: 157px;}
+                }
+           }
+
+           //Contact
+           #contact {padding-right: 0px;
+                .poscenter {margin-top: -4px;
+                     a {font-size: 13px;}
+                     span {font-size: 13px;}
+                }
+           }
+
+           //acordion
+           div.sj-accordion .acd-items .acd-item:hover .acd-image a.hover-link {top: 29%;}
+           .flyout-menu.vertical li > .fm-container.direction-right {left: 100%; right: auto;}
+      .carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive, .thumbnail a > img, .thumbnail > img {width: 100%;}
+    #g-about .ourmember .item-content .image .socials a.facebook {left: 20%;}
+    #g-about .ourmember .item-content .image .socials a.flickr {left: 39%;}
+    .sj-responsive-listing .respl-categories {max-width: 60%;}
+     #g-about .yt-member .yt-member-icons a {width: 25px; height: 25px; line-height: 25px;}
+     div.contact-ajax .ctajax-wrap.style3 .el-info-contact .cf i {width: 30px; height: 30px; line-height: 30px;}
+     div.contact-ajax .ctajax-wrap.style3 .el-info-contact .cf {line-height: 30px;}
+     #g-pageservices .col-md-6 { clear: both;}
+
+     #g-about {
+         &.style6 {
+             img.pull-left {float: none !important; margin: 0 0 30px;}
+             .content {float: none; width: 100%;}
+         }
+     }
+
+     // Sj Medicare
+     #meganavigator, #moonavigator {display: none;}
+     .module.main_slide .sj-slickslider .slickslider-items .slickslider-item .item-content {height: 400px;}
+     .module.main_slide .sj-slickslider .slickslider-items .slickslider-item .item-content .item-content-inner {
+         .item-title {
+             line-height: normal;
+             a {font-size: 42px;}
+         }
+         .item-description {display: none;}
+     }
+     .module.box-wsim .about {
+         .about-img {display: none;}
+         .about-content {width: 90%; padding-right: 35px;}
+     }
+     .module.box-wsim .address .item {margin-bottom: 15px;}
+     #yt_spotlight2 {background-size: cover; max-height: none;}
+     .module.box-maa .box-maa-wrap {
+         .maa-left, .maa-right {
+             float: none; width: 100%; display: block;
+         }
+         .maa-left {
+             padding: 0;
+             .contact-ajax .ctajax-wrap .ctajax-element .el-inner .el-form .el-ctajax-form .el-control .el-input {
+                 width: 83%; &.el-input-date {width: 83%;}
+             }
+         }
+         .maa-right .bg-maa-right {right: 0;}
+     }
+     .module.box-mod {
+         padding-bottom: 50px;
+         .mod-left, .mod-right {
+             float: none; display: block; width: 100%;
+         }
+     }
+     .module.testimonial .yt-testimonial-slider .extraslider-inner .owl-stage-outer .owl-stage .owl-item .all_testimonial {
+         padding: 0 10% !important;
+     }
+     .blog_home .sj-basic-news .item-wrap  {
+         display: block; overflow: hidden; margin-bottom: 20px;
+         .bs-image {
+             float: left; display: inline-block; width: 45%; margin-right: 3%;
+         }
+         .bs-content {
+             float: left; display: inline-block; width: 52%;
+         }
+     }
+     .module.newsletter .acymailing_module_form {
+         .acymailing_introtext {width: 33%;}
+         .acymailing_form {width: 67%;}
+     }
+     #yt_footer {
+         text-align: center;
+         #yt_copyright div {padding: 10px 0 0;}
+         .menu_footer {
+             text-align: center;
+             li a {padding: 10px 0;}
+             li::before {top: 16px;}
+         }
+     }
+     .module.sjflatmenu, .module.popular_posts {
+         width: 50%; float: left; display: inline-block;
+         .sj-basic-news .bs-items .bs-item .bs-image {width: auto;}
+     }
+     .sj-responsive-listing.box-services .respl-wrap .respl-items .respl-item .item-inner .item-content {min-height: 250px;}
+     #page-about .page-about-content .page-about-content-left {margin-bottom: 30px;}
+     .module.box-wsim .services .item {width: 50%; border: none; margin-bottom: 30px;}
+     #page-about .page-about-content .page-about-content-left img {width: 100%;}
+     .box-mc .content .yt-carousel .yt-carousel-slides .owl-stage-outer .owl-stage .owl-item .yt-carousel-slide .yt-carousel-caption {min-height: 200px;}
+     .box-mc .content .yt-carousel .yt-carousel-slides .owl-controls {display: block;}
+     .module.sjflatmenu .modcontent .flyout-menu li > .fm-container {
+         position: relative; box-shadow: none !important;
+         &.direction-left, &.direction-right {left: 0; right: 0;}
+     }
+      //RTL Languages
+    &.rtl {
+        .blog .items-leading .item .article-aside dd .fa {margin-left: 5px; margin-right: 0;}
+        // Sj Medicare
+         .module.box-wsim .about {
+             .about-content {padding:0 35px;}
+         }
+         .module.box-maa .box-maa-wrap {
+             .maa-right .bg-maa-right {right: auto; left: 0;}
+         }
+         .blog_home .sj-basic-news .item-wrap  {
+             .bs-image {
+                 float: right; margin-left: 3%; margin-right: 0;
+             }
+             .bs-content {
+                 float: right;
+             }
+         }
+         .module.sjflatmenu, .module.popular_posts {
+             float: right; 
+         }
+        .module.box-wsim .services .item {border: none;}
+        .item-page ul.related-items {
+            direction: ltr; width: auto;
+            .owl-controls {left: 15px; right: auto;}
+        }
+        .module.box-maa .box-maa-wrap .maa-left {padding: 0;}
+    }
+
+}

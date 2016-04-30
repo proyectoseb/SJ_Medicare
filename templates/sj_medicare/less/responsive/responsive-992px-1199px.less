@@ -1,0 +1,158 @@
+// Medium devices Desktops
+// ------------------
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
+      //Layout-Templates
+      div.container{width: 980px;}
+     #main-top-right{float: right;}
+
+      //Joomla Core
+      .blog {
+           .items-leading .item{
+                .item-image{float: none !important;margin: 0px 0px 20px 0px;display: inline-block;}
+                &.span4,
+                &.span6,
+                &.span3 {
+                     .item-image{
+                          .img_caption{width: auto !important;}
+                     }
+                }
+               &.col-sm-6 {
+                   .article-text {min-height: 205px;}
+               }
+
+           }
+           .items-row .item{
+                .item-image{float: none !important;margin: 0px 0px 20px 0px;display: inline-block;}
+                &.col-sm-3,
+                &.col-sm-4,
+                &.col-sm-6 {
+                     .item-image{
+                          img{max-width: 100% ; display: block ;}
+                          .img_caption{width: auto !important;}
+                     }
+                }
+               &.col-sm-6 {
+                   .article-text {min-height: 205px;}
+               }
+           }
+
+           //Feature
+           &.blog-featured .items-row .item .item-image {}
+
+      }
+      .registration .form-horizontal .control-label{white-space: nowrap; width: 28%;}
+      #login{padding: 0;}
+      // Article
+      .item-page {
+           .btn.btn-flat {font-size: 14px;}
+           .dt-list {width: 47%;}
+      }
+
+      //Tags Category
+      .tag-category ul.items-row .item .item-image {float: none !important;margin: 0px 0px 20px 0px;display: inline-block;}
+
+
+      //Module
+
+           //Search
+           #mod-finder-searchform {margin: 3px 0 0;
+                input.inputbox {width: 185px;}
+           }
+
+           //Login
+           .yt-loginform .dropdown-menu {min-width: 190px;}
+           .mod-languages {
+
+                .dropdown-menu  {min-width: 150px;
+                     li a {font-size: 12px;
+                          img {margin-top: 3px;}
+                     }
+                }
+           }
+           .form-vertical {padding: 13px 5px;
+                .login-greeting {font-size: 12px;margin: 4px 4px 0 0;}
+                .logout-button .btn {padding: 3px 1px 3px 8px;}
+           }
+
+           //Language
+           .mod-languages ul.dropdown-menu {min-width: 150px;}
+
+           //Accordion
+           div.sj-accordion .acd-items .acd-item .acd-content-wrap .acd-content-wrap-inner .acd-content {padding: 10px;
+                .acd-description {font-size: 12px;}
+           }
+
+           //Basic News
+           div.bsn-wrap.theme3 .item {
+                .basicnews-desc {padding: 10px;font-size: 12px;}
+                .basicnews-info {padding:5px 10px 20px;}
+           }
+
+         iframe {width: 100%;}
+
+        // Sj Medicare
+        #meganavigator, #moonavigator {display: none;}
+        .btn-hamburger {display: block !important;}
+    .module.main_slide .sj-slickslider .slickslider-items .slickslider-item .item-content {height: 420px;}
+    .module.main_slide .sj-slickslider .slickslider-items .slickslider-item .item-content .item-content-inner .item-title {
+        line-height: normal; margin-bottom: 10px;
+        a {font-size: 52px;}
+    }
+    .module.main_slide .sj-slickslider .slickslider-items .slickslider-item .item-content .item-content-inner .item-description {
+        font-size: 18px; margin-bottom: 40px;
+    }
+    .module.box-wsim .about {
+        .about-img {width: 33%;}
+        .about-content {
+            width: 57%;
+            .title {margin: 20px 0;}
+        }
+    }
+    .module.box-maa .box-maa-wrap .maa-left .contact-ajax .ctajax-wrap .ctajax-element .el-inner .el-form .el-ctajax-form .el-control {
+        label {display: none;}
+        .el-input {
+            float: none; width: 100%; 
+            &.el-input-date {width: 100%;}
+        }
+    }
+    .module.box-maa .box-maa-wrap .maa-right .bg-maa-right {right: 0;}
+    .module.box-mod .mod-right .mod-right-content .mod-right-item .social .yt-socialbt .sb {
+        width: 20px; height: 20px; line-height: 12px;
+        .fa {font-size: 10px;}
+    }
+    .module.box-maa .box-maa-wrap {
+        .maa-left {width: 40%;}
+        .maa-right {width: 60%;}
+    }
+    .module.newsletter .acymailing_module_form {
+        .acymailing_introtext {width: 25%;}
+        .acymailing_form {width: 75%;}
+    }
+    #yt_copyright {
+        padding: 12px 15px;
+        div {padding: 13px 0;}
+    }
+    .module.box-wcufq .wcu_fq .wcu_fq_left .list_wcu li .content {width: 65%;}
+    .module.box-mot .mod-right-item .social .yt-socialbt {margin: 0 4px 5px;}
+    .module.box-maa .box-maa-wrap .maa-left .contact-ajax .ctajax-wrap .ctajax-element .el-inner .el-form .el-ctajax-form .row .el-control {
+        width: 50%; #cainput_submit {padding: 12px 15px;}
+    }
+    .box-mc .content .yt-carousel .yt-carousel-slides .owl-stage-outer .owl-stage .owl-item .yt-carousel-slide .yt-carousel-caption {min-height: 200px;}
+          //RTL Language
+          &.rtl {
+              .blog .items-leading .item .article-aside dd .fa {margin-left: 5px; margin-right: 0;}
+              // Sj Medicare
+            .module.box-maa .box-maa-wrap .maa-right .bg-maa-right {right: auto; left: 0;}
+            .item-page ul.related-items {
+                direction: ltr; width: auto;
+                .owl-controls {left: 15px; right: auto;}
+            }
+              
+              
+          }
+
+
+}
+

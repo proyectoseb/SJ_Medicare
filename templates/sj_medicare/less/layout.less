@@ -1,0 +1,137 @@
+/*******************************************
+***          YT Framework: less          ***
+*******************************************/
+
+// --* Layouts Templates *-----------------
+// ----------------------------------------
+/*   1.Block Header
+ *   2.Block Mainmenu
+ *   3.Block Slideshow
+ *   4.Block Breadcrumb
+ *   5.Block Main Content
+ *   6.Block Spotlight
+ *   7.Block Footer
+ *   8.Non-responsive
+ */
+
+
+body{ color:#898989; background: #fff;  font-size: 14px; font-weight: 400; line-height: 24px;}
+h1,h2,h3 {font-weight: 700;}
+
+.btn {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+//1.Block Header
+//2.Block Mainmenu
+#yt_top {
+    background: #013245;
+    background: -moz-linear-gradient(left, #013245 0%, #002331 70%, #002331 100%);
+    background: -webkit-linear-gradient(left, #013245 0%,#002331 70%,#002331 100%);
+    background: linear-gradient(to right, #013245 0%,#002331 70%,#002331 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013245', endColorstr='#002331',GradientType=1 );
+    position: relative; z-index: 100; color: #fff; //.transition(all 0.3s ease-in-out);
+    .logo {display: block; padding: 46px 0; .transition(all 0.3s ease-in-out);}
+    .search_top {padding-top: 35px;  .transition(all 0.3s ease-in-out);}
+    .module.btn-maa {padding-top: 50px; .transition(all 0.3s ease-in-out);}
+    &.menu-fixed {
+        position: fixed; width: 100%;
+        #meganavigator li.level1 > .item-link {padding: 20px 0 25px 34px;}
+        .logo {display: block; padding: 16px 0;}
+        .search_top {
+            padding-top: 14px;
+            .btn-finder-searchform {padding: 8px 18px;}
+        }
+        .module.btn-maa {padding-top: 20px;}
+    }
+}
+
+//3.Block Slideshow
+#yt_slideshow {
+    background: #013245;
+    background: -moz-linear-gradient(left, #013245 0%, #002331 70%, #002331 100%);
+    background: -webkit-linear-gradient(left, #013245 0%,#002331 70%,#002331 100%);
+    background: linear-gradient(to right, #013245 0%,#002331 70%,#002331 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013245', endColorstr='#002331',GradientType=1 );
+    color: #fff;
+}
+//4.Block Breadcrumb
+#yt_breadcrumb {
+    background: #013245;
+    background: -moz-linear-gradient(left, #013245 0%, #002331 70%, #002331 100%);
+    background: -webkit-linear-gradient(left, #013245 0%,#002331 70%,#002331 100%);
+    background: linear-gradient(to right, #013245 0%,#002331 70%,#002331 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013245', endColorstr='#002331',GradientType=1 );
+    border-top: rgba(255,255,255,0.2) 1px solid; color: #fff;
+}
+//5.Block Main Content
+#content {
+    padding: 50px 0;
+    &.page_services {padding: 0;}
+}
+
+.homepage #content { background: #fff; padding: 73px 0 113px;}
+//6.Block Spotlight
+#yt_spotlight1 {
+    background: #f7f7f7;
+}
+
+#yt_spotlight2 {
+    max-height: 646px; background: url(@{base-url}/bg-spotlight2.jpg) 0 0 no-repeat;
+    background-size: cover;
+}
+
+#yt_spotlight3 {
+    background: #f7f7f7;
+}
+
+#yt_spotlight4 {
+    background: #013245;
+    background: -moz-linear-gradient(left,  #013245 0%, #002331 100%);
+    background: -webkit-linear-gradient(left,  #013245 0%,#002331 100%);
+    background: linear-gradient(to right,  #013245 0%,#002331 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013245', endColorstr='#002331',GradientType=1 );
+    color: #fff;
+}
+
+#yt_spotlight5 {
+    background: #f7f7f7; padding: 60px 0 0;
+}
+
+#yt_spotlight6 {
+    background: #fff;
+}
+
+#yt_spotlight7 {padding-top: 83px;}
+
+#yt_spotlight8 {margin-top: 35px;}
+
+#yt_spotlight8, #yt_spotlight9, #yt_footer {
+    background: #013245;
+    background: -moz-linear-gradient(left,  #013245 0%, #002331 100%);
+    background: -webkit-linear-gradient(left,  #013245 0%,#002331 100%);
+    background: linear-gradient(to right,  #013245 0%,#002331 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013245', endColorstr='#002331',GradientType=1 );
+    color: #fff;
+    h3.modtitle {color: #fff; border-bottom-color: #1b404f;}
+}
+//7.Block Footer
+#yt_footer {
+    .container {
+        &:before {
+            background: #1b4454; width: 100%; height: 1px;
+            display: block; content: "";
+        }
+    }
+}
+
+#yt_copyright {
+    div {display: inline-block; padding: 25px 0;}
+}
+
+//8.Non-responsive Bootstrap
+@media  (max-width: 1024px) {.no-res{width: 1190px; }}
+
